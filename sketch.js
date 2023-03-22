@@ -24,15 +24,22 @@ function setup() {
      isStatic: true
    };
   
-   btn2 = createImg('up.png');
-  btn2.position(350,30);
-  btn2.size(50,50);
-  btn2.mouseClicked(vForce);
+   //Utilize o código 'createImg' para criar um botão que terá a imagem 'up.png'
+  btn2 = ???('up.png');
+  //Utilize o código 'position' para definir a posição do botão
+  btn2.???(350,30);
+  //Utilize o código 'size' para definir o tamanho do botao
+  btn2.???(50,50);
+  //Utilize o código 'mouseClicked' para que...
+  //Quando o botão for clicado, aconteca a função 'vForce'
+  btn2.???(vForce);
 
   ground1 = Bodies.rectangle(100,300,100,20,ground_options);
-  World.add(world,ground1);
+  //Utilize o código ' World.add' para adicionar o chão ao mundo
+  ???(world,ground1);
 
-  ball = Bodies.circle(100,10,20,ball_options);
+  //Utilize o código 'Bodies.circle' para criar um corpo em formato circular
+  ball = ???(100,10,20,ball_options);
   World.add(world,ball);
   
  
@@ -49,22 +56,21 @@ function draw()
   background(51);
   Engine.update(engine);
   
-  
-  Matter.Body.rotate(ground1,angle)
- push();
+  //Utilize o código 'Matter.Body.rotate' para adicionar uma rotação ao 'ground1'
+  ???(ground1,angle)
+  push();
   translate(ground1.position.x,ground1.position.y);
   rotate(angle);
   rect(0,0,100,20);
   pop();
   
-  angle +=0.1;
+  //Defina o ângulo para 0.1, esse será o ângulo da rotação
+  angle +=???;
 
  
 
   ellipse(ball.position.x,ball.position.y,20);
   rect(ground.position.x,ground.position.y,650,20);
- 
-//console.log(ground.position.y);
 
   
   
@@ -72,6 +78,7 @@ function draw()
 
 function vForce()
 {
+  //Utilize o código 'Matter.Body.applyForce' para aplicar uma força na bola
   Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:-0.05});
 }
   
